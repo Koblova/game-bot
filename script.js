@@ -1,9 +1,10 @@
 let quastion;
-let answer = 55;
+let answer;
 
 
 function check() {
-    
+
+    answer = 55;
     quastion = prompt("Угадай число от 1 до 100");
     
     if (quastion === null) {

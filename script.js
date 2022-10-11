@@ -3,7 +3,6 @@
 function game() {
     let answer = 55;
     let quastion = prompt("Угадай число от 1 до 100");
-
     function check() {              
         if (quastion === null) {
             alert("Игра закончена");

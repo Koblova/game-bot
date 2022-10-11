@@ -1,28 +1,28 @@
-let quastion;
-let answer;
+'use strict'
 
-function game(answer) {
-    function check() {
-        quastion = prompt("Угадай число от 1 до 100");
-        
+function game() {
+    let answer = 55;
+    let quastion = prompt("Угадай число от 1 до 100");
+
+    function check() {              
         if (quastion === null) {
             alert("Игра закончена");
         } else if (quastion > 100 || quastion < 0) {
             alert("Число должно быть от 1 до 100!");
-            check();  
+            game(answer)  
         } else if (quastion.length == 0 || isNaN(quastion) || (/^\s*$/.test(quastion))) {
             alert("Введи число!");
-            check();
+            game(answer) 
         } else if (quastion > answer) {
             alert("Загаданное число меньше");
-            check();
+            game(answer) 
         } else if (quastion < answer) {
             alert ("Загаданное число больше");
-            check();
+            game(answer) 
         } else if (quastion <= 100 && quastion >= 0) {
             return confirm("Вы угадали!");
         };
     }
     check();
 }
-game(55);
+game();
